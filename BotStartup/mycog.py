@@ -9,8 +9,8 @@ class MyCog(commands.Cog):
     @commands.command()
     async def startbots(self, ctx):
         """This does stuff!"""
-        owner = ctx.get_user(560181647006367794)
-        if ctx.author.id == 560181647006367794:
+        owner = ctx.fetch_user(560181647006367794)
+        if commands.is_owner():
             subprocess.Popen(['python3', '~/OtherBots/FRIDAY.py'])
             subprocess.Popen(['python3', '~/OtherBots/SleepBot.py'])
             subprocess.Popen(['python3','~/OtherBots/Heath.py'])
